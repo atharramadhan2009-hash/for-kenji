@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>memory</title>
+<link rel="stylesheet" href="galery.css">
+</head>
+
+<body class="page2">
+    <audio autoplay loop>
+<source src="putingbeliung.mp3" type="audio/mp3">
+</audio>
+
+<div class="confetti"></div>
+<div class="confetti">
+<span style="left:5%"></span>
+<span style="left:10%"></span>
+<span style="left:15%"></span>
+<span style="left:20%"></span>
+<span style="left:30%"></span>
+<span style="left:40%"></span>
+<span style="left:50%"></span>
+<span style="left:60%"></span>
+<span style="left:70%"></span>
+<span style="left:80%"></span>
+<span style="left:90%"></span>
+</div>
+
+<h1 class="gallery-title">memory Kenji</h1>
+
+<div class="gallery">
+
+<div class="card">
+<img src="kenji1.jpg.jpeg">
+</div>
+
+<div class="card">
+<video autoplay muted loop playsinline>
+<source src="kenji1.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="card">
+<video autoplay muted loop playsinline>
+<source src="kenji2.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="card">
+<video autoplay muted loop playsinline>
+<source src="kenji3.mp4" type="video/mp4">
+</video>
+</div>
+
+</div>
+
+<a href="index.html">
+<button class="btn back">Kembali</button>
+</a>
+
+<script>
+
+const balloonContainer = document.querySelector(".balloons");
+
+function createBalloon(){
+
+let balloon = document.createElement("div");
+
+let colors = ["#ff4d6d","#ffd166","#06d6a0","#118ab2","#ff9f1c","#ff7aa2"];
+
+let size = Math.random()*40 + 40;
+
+balloon.style.left = Math.random()*100 + "vw";
+balloon.style.width = size + "px";
+balloon.style.height = size*1.2 + "px";
+balloon.style.background = colors[Math.floor(Math.random()*colors.length)];
+balloon.style.animationDuration = (Math.random()*6+6)+"s";
+
+balloonContainer.appendChild(balloon);
+
+setTimeout(()=>{
+balloon.remove();
+},12000);
+
+}
+
+setInterval(createBalloon,800);
+
+</script>
+</body>
+</html>

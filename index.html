@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selamat Ulang Tahun</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page1">
+<audio autoplay loop>
+<source src="putingbeliung.mp3" type="audio/mp3">
+</audio>
+
+    <div class="confetti3d"></div>
+
+<div class="container">
+
+<h1 class="title">🎉 +1 bro kenji 🎂</h1>
+
+<p class="message">
+Semoga semua yang di-semogakan, ter-semogakan<br>
+❗❗jangan lupa traktir gacoan ❗❗<br>
+<br><br>
+
+Pagi pagi beli jamu,<br>
+Jamu-nya di tambahin susu,<br>
+Jangan mikirin siska mulu,<br>
+sering sering-in jogging kek dulu.
+</p>
+
+<a href="galery.html">
+<button class="btn">Hadiah buat antum 🎁</button>
+</a>
+
+</div>
+
+<script>
+
+const confetti3d = document.querySelector(".confetti3d");
+
+function createConfetti(){
+
+let el = document.createElement("div");
+
+let colors = ["#ff4d6d","#ffd166","#06d6a0","#118ab2","#ffffff","#ff9f1c"];
+
+let size = Math.random()*10 + 8;
+
+el.style.left = Math.random()*100 + "vw";
+el.style.width = size + "px";
+el.style.height = size + "px";
+el.style.background = colors[Math.floor(Math.random()*colors.length)];
+el.style.animationDuration = (Math.random()*3+4)+"s";
+
+confetti3d.appendChild(el);
+
+setTimeout(()=>{
+el.remove();
+},7000);
+
+}
+
+setInterval(createConfetti,90);
+
+</script>
+</body>
+</html>
+
+<h1 class="title"></h1>
+
